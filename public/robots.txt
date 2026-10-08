@@ -1,0 +1,5 @@
+# Kiroku Japanese Stationery Blog - robots.txt
+User-agent: *
+Allow: /
+
+Sitemap: https://kiroku-stationery.com/sitemap.xml

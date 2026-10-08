@@ -1,0 +1,50 @@
+@import "tailwindcss";
+
+@theme {
+  --font-serif: "Cormorant Garamond", "Shippori Mincho", Georgia, serif;
+  --font-sans: "Plus Jakarta Sans", system-ui, -apple-system, sans-serif;
+  --font-jp: "Shippori Mincho", "Cormorant Garamond", serif;
+  --color-paper: #FAF8F5;
+  --color-paper-muted: #F4EFE6;
+  --color-paper-card: #FFFFFF;
+  --color-paper-border: #E8E2D5;
+  --color-sumi: #1C1917;
+  --color-sumi-muted: #57534E;
+  --color-hanko: #BA3829;
+  --color-matcha: #5F7161;
+}
+
+@layer base {
+  body {
+    font-family: var(--font-sans);
+    background-color: var(--color-paper);
+    color: var(--color-sumi);
+    font-feature-settings: "palt" 1;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1, h2, h3, .font-editorial {
+    font-family: var(--font-serif);
+    text-wrap: balance;
+  }
+}
+
+/* Custom scrollbar and reading typography */
+::selection {
+  background-color: rgba(186, 56, 41, 0.18);
+  color: #1C1917;
+}
+
+/* Drop cap styling */
+.drop-cap::first-letter {
+  font-family: var(--font-serif);
+  font-size: 3.5rem;
+  line-height: 0.85;
+  float: left;
+  margin-right: 0.65rem;
+  margin-top: 0.15rem;
+  color: #BA3829;
+  font-weight: 500;
+}
+
